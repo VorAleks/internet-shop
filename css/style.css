@@ -17,6 +17,7 @@ input:focus-visible{
     max-width: 1600px;
     margin: 0 auto;
     box-sizing: border-box;
+    position: relative;
 }
 
 .center {
@@ -31,12 +32,12 @@ input:focus-visible{
 }
 
 .page-header-wrp {
-    padding: 18px 230px;
+    padding: 18px 0 0 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     box-sizing: border-box;
-    position: relative;
+    /* position: relative; */
 }
 
 .page-header-wrp button {
@@ -652,16 +653,17 @@ input:focus-visible{
     font-size: 19.96px;
     line-height: 24px;
     text-align: center;
-    color: #FBFBFB;
+    color: #fbfbfb;
 }
 .features-item-txt {
     max-width: 360px;
     font-weight: 300;
     font-size: 13.972px;
     line-height: 17px;
-    text-align: center;
-    margin: 16px 0 0 0;
-    color: #FBFBFB;
+    text-align:center;
+    margin: 16px auto 0;
+    padding: 0 17px;
+    color: #fbfbfb;
 }
 /* === end features === */
 
@@ -682,7 +684,7 @@ input:focus-visible{
     align-items: center;
     width: 100%;
     min-height: 448px;
-    padding: 20px 230px;
+    padding: 20px 0 0 0;
     margin: 0 auto;
     box-sizing: border-box;
     
@@ -706,6 +708,7 @@ input:focus-visible{
     background-repeat: no-repeat;
 }
 .subscribe-info-txt {
+    margin: 30px 0;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -800,14 +803,18 @@ input:focus-visible{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 235px;
+    padding: 24px 0;
     box-sizing: border-box;
 }
 .page-footer-txt {
+    margin: 0;
+    display: block;
+    height: 32px;
+    align-items: center;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 19.2px;
+    line-height: 32px;
     color: #FBFBFB;
 }
 .page-footer-socials {
@@ -979,7 +986,7 @@ input:focus-visible{
     color: #EF5B70;
 }
 .filter-list>li:first-child {
-    padding: 13px 0 0 0;
+    padding: 12px 0 0 0;
     border-bottom: none;
     margin: 0 0 18px -1px;
 }
@@ -1433,11 +1440,12 @@ $carousel-dark-control-icon-filter:  invert(1) grayscale(100); */
     /* position: relative;*/
 }
 .cart-item-img {
-    height: 100%;
+    width:  100%;
     box-sizing: border-box;
 }
 .cart-item-text {
     width: 100%;
+    min-width: 185px;
     display: block;
     padding: 22px 22px 31px;
     box-sizing: border-box;
@@ -1512,6 +1520,10 @@ $carousel-dark-control-icon-filter:  invert(1) grayscale(100); */
     font-size: 18px;
     line-height: 22px;
     color: #656565;
+}
+.cart-item-text-quantity::-webkit-inner-spin-button,
+.cart-item-text-quantity::-webkit-outer-spin-button {
+    appearance: none;
 }
 .cart-item-btn-wrp {
     width: 100%;
@@ -1686,6 +1698,10 @@ $carousel-dark-control-icon-filter:  invert(1) grayscale(100); */
     width: 100%;
     justify-content: space-between;
 }
+.registration-input-wrp {
+    margin: 0 30px 0 0;
+    min-width: 280px;
+}
 .registration-input-title1 {
     text-transform: capitalize;
     margin: 0;
@@ -1694,20 +1710,25 @@ $carousel-dark-control-icon-filter:  invert(1) grayscale(100); */
 .registration-input-last {
     text-transform: capitalize;
 }
+.registration-input-sex-wrp {
+    display: flex;
+    padding: 31px 0 0 0;
+}
 .registration-input-sexchoice {
     width: 17px;
     height: 17px;
     color:#a4a4a4;
-    margin: 31px 0 0 0;
+    margin: 0;
 }
-
 .registration-input-sextxt {
+    display: block;
+    height: 17px;
     margin: 0 20px 0 10px;
     text-transform: capitalize;
     font-style: normal;
     font-weight: 300;
     font-size: 11px;
-    line-height: 13px;  
+    line-height: 17px;  
     color: #000000;
 }
 .registration-input-title2 {
@@ -1776,3 +1797,30 @@ margin-bottom: 15px;
     margin: 0 0 16px 0;
 }
 /* === end registration === */
+
+@media (max-width:768px) {
+    .features-wrp {
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 0 64px 0;
+    }
+    .features-item {
+        margin: 0 auto;
+        padding: 48px 0 0 0;
+        width: 100%;
+        min-height: 100%;
+    }
+    
+    .subscribe-wrp {
+        min-height: 614px;
+        flex-direction: column;
+        padding: 53px 0 0 0;
+        justify-content:flex-start;       
+    }
+    .subscribe-info-txt {
+        margin: 30px 0 85px 0;
+    }
+    .footer-wrp {
+        padding: 24px 32px;
+    }
+}
